@@ -1,4 +1,4 @@
-# G3.User32
+# TripleG3.User32
 ## Project for hooking libraries in Windows applications such as keyboard and mouse.
 
 Example hooking / listening to the keyboard:
