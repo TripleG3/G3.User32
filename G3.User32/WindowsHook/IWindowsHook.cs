@@ -7,5 +7,5 @@ public interface IWindowsHook
     nint HookHandle { get; }
     event EventHandler<WindowsHookEventArgs> HookProcessing;
     void Hook();
-    void UnHook();
+    int UnHook();
 }

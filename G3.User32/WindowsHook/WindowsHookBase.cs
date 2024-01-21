@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using G3.User32.Exceptions;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
@@ -12,7 +13,8 @@ public abstract partial class WindowsHookBase(Hook idHook) : IWindowsHook
 {
     private static readonly nint baseAddress;
     static WindowsHookBase() => baseAddress = Process.GetCurrentProcess().MainModule?.BaseAddress
-                      ?? throw new InvalidOperationException("BaseAddress was null when activating HookBase", new Win32Exception(Marshal.GetLastWin32Error()));
+                                           ?? throw new BaseAddressNullException($"BaseAddress was null when activating {nameof(WindowsHookBase)}. This happens when the call to Process.GetCurrentProcess().MainModule?.BaseAddress is null which is used as the callback address for SetWindowsHookExA.",
+                                                                                 new Win32Exception(Marshal.GetLastWin32Error()));
 
     private readonly Hook idHook = idHook;
 
@@ -22,10 +24,6 @@ public abstract partial class WindowsHookBase(Hook idHook) : IWindowsHook
     /// <param name="sender">HookBase</param>
     /// <param name="e">HookBaseEventArgs</param>
     public event EventHandler<WindowsHookEventArgs> HookProcessing = delegate { };
-
-    public const string I_LOVE_GOD_FOREVER = "Thank you God for all the wisdom, love, mercy, and forgiveness you have given me.  " +
-                                             "Thank you for the talent to do what all I can do and I pray that I do it all to gloriy you.  " +
-                                             "Thank you so much for my family.  I love you and praise you and lift your name higher forever and ever. I love you God with all my heart.";
 
     /// <summary>
     /// If true prevents the hook messages from reaching other applications.
@@ -65,10 +63,11 @@ public abstract partial class WindowsHookBase(Hook idHook) : IWindowsHook
     /// Unhooks the class with a call to UnHookWindowsHookEx.
     /// Sets the hookHandle as nothing (meaning IsHooked returns false) and all other values should be reset.
     /// </summary>
-    public void UnHook()
+    public int UnHook()
     {
-        UnhookWindowsHookEx(HookHandle);
+        var success = UnhookWindowsHookEx(HookHandle);
         HookHandle = nint.Zero;
+        return success;
     }
 
     /// <summary>
