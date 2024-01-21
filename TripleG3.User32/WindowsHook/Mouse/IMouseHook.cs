@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Mouse;
+﻿namespace TripleG3.User32.WindowsHook.Mouse;
 
 public interface IMouseHook : IWindowsHook
 {

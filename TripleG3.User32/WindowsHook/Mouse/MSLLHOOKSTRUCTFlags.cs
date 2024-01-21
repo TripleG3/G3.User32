@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Mouse;
+﻿namespace TripleG3.User32.WindowsHook.Mouse;
 
 /// <summary>
 /// Specifies the event-injected flag. An application can use the following value to test the mouse flags. Value Purpose LLMHF_INJECTED Test the event-injected flag.  

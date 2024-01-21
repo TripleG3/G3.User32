@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace G3.User32;
+namespace TripleG3.User32;
 
 public class Window
 {

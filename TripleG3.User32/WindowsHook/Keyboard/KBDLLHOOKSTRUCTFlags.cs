@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Keyboard;
+﻿namespace TripleG3.User32.WindowsHook.Keyboard;
 
 /// <summary>
 /// The bitwise flags return with the HookProc delegate assigned to the SetWindowsHookProc.

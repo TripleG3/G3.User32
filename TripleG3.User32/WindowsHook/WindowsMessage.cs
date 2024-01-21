@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook;
+﻿namespace TripleG3.User32.WindowsHook;
 
 /// <summary>
 /// Enumeration of WindowsMessages Retrieved from http://pinvoke.net/default.aspx/Enums/WindowsMessages.html

@@ -1,9 +1,9 @@
-﻿using G3.User32.Exceptions;
+﻿using TripleG3.User32.Exceptions;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace G3.User32.WindowsHook;
+namespace TripleG3.User32.WindowsHook;
 
 /// <summary>
 /// Initializes the HookBase Class and determines the type of hook that will be installed.

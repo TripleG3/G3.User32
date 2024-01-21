@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Keyboard;
+﻿namespace TripleG3.User32.WindowsHook.Keyboard;
 
 public class KeyboardHook : WindowsHookBase, IKeyboardHook
 {

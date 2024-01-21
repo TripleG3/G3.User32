@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace G3.User32.WindowsHook.Mouse;
+namespace TripleG3.User32.WindowsHook.Mouse;
 
 #pragma warning disable CS9107 // Parameter is captured into the state of the enclosing type and its value is also passed to the base constructor. The value might be captured by the base class as well.
 public class MouseHookEventArgs(int nCode, nint wParam, nint lParam) : WindowsHookEventArgs(nCode, wParam, lParam)

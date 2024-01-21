@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace G3.User32.WindowsHook.Mouse;
+namespace TripleG3.User32.WindowsHook.Mouse;
 
 /// <summary>
 /// The MSLLHOOKSTRUCT structure contains information about a low-level mouse input event. 

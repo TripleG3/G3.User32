@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Mouse;
+﻿namespace TripleG3.User32.WindowsHook.Mouse;
 
 /// <summary>
 /// Represents the XButton if used by the mouse.

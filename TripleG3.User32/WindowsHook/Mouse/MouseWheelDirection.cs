@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook.Mouse;
+﻿namespace TripleG3.User32.WindowsHook.Mouse;
 
 /// <summary>
 /// The direction of the wheel movement if used.

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace G3.User32.WindowsHook.Mouse;
+namespace TripleG3.User32.WindowsHook.Mouse;
 
 /// <summary>
 /// Used to perform a low level hook on the mouse then read and fire mouse event information.

@@ -1,4 +1,4 @@
-﻿namespace G3.User32.WindowsHook;
+﻿namespace TripleG3.User32.WindowsHook;
 
 /// <summary>
 /// Instatiates the KeyEventArgs Class with the same signature returned to our HookProc Delegate returned with SetWindowsHookEx.
