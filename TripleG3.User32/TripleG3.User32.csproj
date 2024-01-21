@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<WarningsAsErrors>Nullable</WarningsAsErrors>
-		<Version>8.0.1</Version>
+		<Version>8.0.3</Version>
 		<Title>TripleG3.User32</Title>
 		<Description>User.32.dll for net8.0-windows.	If you wish to assist development please contact G3 at the repository link. This is open source and free to use. God bless.</Description>
 		<Authors>Michael Puckett, II</Authors>
@@ -18,10 +18,12 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RepositoryType>git</RepositoryType>
 		<ILoveGodWithAllMyHeart>
-			Thank You God for all the wisdom, love, mercy, and forgiveness You have given me. 
-			Thank You for the talent to do what I can do and I pray that I do it all to gloriy You. Thank You so much for my family.  
+			Thank You God for all the wisdom, love, mercy, and forgiveness You have given me.
+			Thank You for the talent to do what I can do and I pray that I do it all to gloriy You. Thank You so much for my family.
 			I love you and praise you and lift Your name higher forever and ever. I love You God, my Father, with all my heart.
 		</ILoveGodWithAllMyHeart>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -33,6 +35,7 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+		<None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
 	</ItemGroup>
 
 </Project>
