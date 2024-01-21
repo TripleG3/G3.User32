@@ -49,12 +49,12 @@ public abstract partial class WindowsHookBase(Hook idHook) : IWindowsHook
         if (HookHandle != nint.Zero)
         {
             UnHook();
-            throw new Exception("Cannot hook the class twice with the same handle. Class is already hooked by this process or thread and has now been unhooked do prevent system error.");
+            throw new HookException($"{nameof(Hook)} cannot be called twice with same handle. {nameof(UnHook)} was called prior to this exception to prevent system error.");
         }
         HookHandle = SetWindowsHookExA((int)idHook, Marshal.GetFunctionPointerForDelegate<HookProc>(MainHookProc), baseAddress, 0);
         if (HookHandle == nint.Zero)
         {
-            throw new Exception("HookKeyBoard Failed. A call to SetWindowsHookEx returned a value of Null");
+            throw new HookException($"P{nameof(Hook)} failed because SetWindowsHookEx returned a value of null.");
         }
         OnHook();
     }
