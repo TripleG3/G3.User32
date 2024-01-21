@@ -33,7 +33,7 @@ public class KeyboardHookEventArgs(int nCode, nint wParam, nint lParam) : Window
     /// True if the current key event was injected; meaning another application inserted the event and the keyboard was not physically used.
     /// </summary>
     /// <remarks>The flag value in KBDLLHOOKSTRUCTFlags.LLKHF_INJECTED compared to the flag sent with the event.</remarks>
-    public bool Injected => KBDLLHOOKSTRUCTFlags.LLKHF_INJECTED == (keyboardHookStruct.flags & KBDLLHOOKSTRUCTFlags.LLKHF_INJECTED);
+    public bool IsInjected => KBDLLHOOKSTRUCTFlags.LLKHF_INJECTED == (keyboardHookStruct.flags & KBDLLHOOKSTRUCTFlags.LLKHF_INJECTED);
 
     /// <summary>
     /// True if the Alt Key is down.
